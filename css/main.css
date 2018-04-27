@@ -122,7 +122,10 @@ font-size: 0.50em;
   align-items: center;
 }
 
-
+.hot .weather-square {
+  background-color: orange  ;
+  align-items: center;
+}
 
 .snow .weather-square {
   background-color: #808080  ;
@@ -191,7 +194,7 @@ font-size: 0.50em;
   background-size: contain;
 }
 
-.clear .weather-image {
+.clear, .hot .weather-image {
   background-image: url(clear.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -383,7 +386,7 @@ padding-top: 12px;
       margin-top: 10px;
 }
 
-.clear .weather-image {
+.clear , .hot .weather-image {
   background-image: url(clear.png);
   background-repeat: no-repeat;
   background-position: center center;
