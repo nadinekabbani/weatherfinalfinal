@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Set a page title -->
+  <title>Honest Weather Website</title>
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="/css/tachyons.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<div class="wrapper">
+  <!-- Header -->
+  <header class="sans-serif">
+    <div>
+      <h3 class=" headercontainer  headersize mv0">
+        <span class=" white pa2 tracked-tight">
+        WHERE ARE YOU ?  </h3>
+      </span>
+      <h5 class="text3 ttu tracked black-80">An Honest Weather Website</h5>
+    </div>
+
+  </header>
+
+  <!-- Container of all boxes -->
+
+  <body>
+    <div id="error" class="f2 bg-orange sans-serif white pa4 bottom-0 w-100">
+      Check your spelling!
+    </div>
+    <div class="containerboxes sans-serif">
+
+      <!-- Row 1-->
+      <div class=" container-1">
+        <!-- If there is an error, this box is shown. 'dn' is the only required class -->
+
+        <div class="box-1">
+          <form id="location-search">
+            <h1>
+               <span class="text5 ttu black-80 mr3 mb2">
+                 Weather for:
+               </span>
+               <input class="text4" type="text" id="area" value="Boston">
+             </h1>
+          </form>
+
+        </div>
+
+
+        <div class="box-2">
+
+
+          <div class="box-2">
+            <div class="textlocation">
+              <p>City: <span id="location-name"></span></p>
+              <p>Country: <span id="country"></span></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Row 2-->
+      <div class="container-2">
+
+        <!-- CURRENT TEMPERATURE   -->
+        <div class="container-2-box1">
+          <div class=" weather-square center">
+            <div class="texttemp"> <span id="temp"></span></div>
+          </div>
+        </div>
+
+        <div class="container-2-box2 textminmax tc">
+          <div>&#8593; <span id="temp-max"></span></div>
+          <div>&#8595;<span id="temp-min"></span></div>
+
+        </div>
+      </div>
+      <!-- Row 3-->
+      <div class="container-3">
+        <div class="container-2-box1">
+          <div class=" weather-image">
+            <div class="texttemp"> <span id="temp"></span></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<!-- containerboxes  -->
+</div>
+<!-- wrapper -->
+<!-- Site JavaScript -->
+<script src="/javascript/toggleClass.js" charset="utf-8"></script>
+<script src="/javascript/main.js" charset="utf-8"></script>
+<script src="/javascript/weather.js" charset="utf-8"></script>
+</body>
+
+</html>

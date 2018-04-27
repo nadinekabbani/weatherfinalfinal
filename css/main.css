@@ -1,0 +1,411 @@
+/* ========================================
+ * CSS written here will override Tachyons
+ * ======================================== */
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 14%;
+  margin-right: 14%;
+}
+.wrapper > * {
+  flex: 1 100%;
+}
+
+.text3{
+font-size: 0.8em;
+}
+
+.text5{
+font-size: 0.50em;
+}
+
+.text4{
+    font-size: 0.6em;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-color: black;
+    border-bottom-width: 4px;
+    font-variant: small-caps;
+    font-weight: 100;
+    max-width: 170px;
+    color: orange;
+}
+.headersize {
+  font-size: 1.5em;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-left: 0px;
+  text-align: left;
+}
+.containerboxes {
+  padding: 0.5 px;
+  border-top: 5px black double;
+  border-bottom: 5px black double;
+}
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headercontainer {
+  background-image: url(01.png);
+  background-repeat: repeat-x;
+  -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  -webkit-animation: animate 3s linear infinite;
+  -webkit-backface-visibility:hidden;
+}
+
+@-webkit-keyframes animate{
+  0%{
+    background-position: 0% 50% ;
+  }
+  100%{
+    background-position: 100% 50% ;
+  }
+}
+
+
+.box-1 {
+  flex: 2;
+}
+.textlocation {
+  position: bottom;
+}
+.box-2 {
+  flex: 1;
+  text-align:center;
+}
+.container-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-2-box1 {
+  text-align: center;
+  flex: 2;
+}
+.container-2-box2 {
+  flex: 1;
+}
+.weather-square {
+  width: 200px;
+  height: 200px;
+  position: center;
+  background-color: black;
+
+
+}
+.texttemp {
+  font-size: 6.2em;
+  text-align: right;
+  text-decoration: underline;
+  white-space: pre-wrap;
+  padding-top: 70px;
+  color: white;
+}
+.textminmax {
+  align-content: flex-end;
+  font-size: 2.2em;
+  text-align: rigth;
+  text-decoration: underline;
+  padding-top: 30px;
+}
+
+
+
+
+.rain  .weather-square {
+  background-color: #3FB9C8;
+  align-items: center;
+}
+
+
+
+.snow .weather-square {
+  background-color: #808080  ;
+  align-items: center;
+}
+
+.atmosphere .weather-square {
+  background-color: #8199CA;
+  align-items: center;
+}
+
+.drizzle .weather-square {
+  background-color:  #27452A  ;
+  align-items: center;
+}
+
+.clear .weather-square {
+  background-color: #D7FD00;
+  align-items: center;
+}
+
+.clouds .weather-square {
+  background-color: #BEA4BB;
+  align-items: center;
+}
+
+.sun .weather-square {
+  background-color: yellow;
+  align-items: center;
+}
+
+.rain .weather-image {
+  background-image: url(rain.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+}
+
+
+.snow .weather-image {
+  background-image: url(snow.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+}
+
+.atmosphere .weather-image {
+  background-image: url(atmosphere.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+}
+
+.drizzle .weather-image {
+  background-image: url(drizzle.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+}
+
+.clear .weather-image {
+  background-image: url(clear.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+}
+
+@@keyframes bgcolor {
+0%{
+  background:red;
+}
+40%{
+    background:blue;
+}
+100%{
+    background: green;
+}
+}
+
+.clouds .weather-image {
+  background-image: url(cloud.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+}
+
+
+
+
+
+/* Mobile */
+@media (min-width: 200px) {
+  /* We invert order of first sidebar and main
+     * And tell the main element to take twice as much width as the other two sidebars
+     */
+  .main {
+    flex: 2 0px;
+  }
+
+  .container-1 {
+    flex-direction: column;
+    text-align: center;
+    order: 1;
+  }
+  .container-2 {
+    flex-direction: column;
+    order: 3;
+    text-align: center;
+  }
+  .container-3 {
+    flex-direction: column;
+    order: 2;
+  }
+  .footer {
+    flex-direction: column;
+    order: 4;
+  }
+}
+
+/* Large screens */
+@media all and (min-width: 680px) {
+  /* We invert order of first sidebar and main
+    * And tell the main element to take twice as much width as the other two sidebars
+    */
+  .main {
+    flex: 2 0px;
+  }
+  .container-1 {
+    flex-direction: row;
+    text-align: left;
+    order: 1;
+  }
+  .container-3 {
+    flex-direction: row;
+    order: 3;
+  }
+  .container-2 {
+    flex-direction: row;
+    order: 2;
+    text-align: left;
+  }
+
+  .headersize {
+    font-size: 6.0em;
+    padding-right: 250px;
+    text-align: left;
+    letter-spacing: 1000em;
+  }
+
+  .text4{
+      font-size: 0.9em;
+      border-bottom-style: solid;
+      border-top-style: none;
+      border-left-style: none;
+      border-right-style: none;
+      border-bottom-color: black ;
+      border-bottom-width: 4px;
+      font-variant: small-caps;
+      font-weight: 100;
+      max-width: 500px;
+      text-align:center;
+
+}
+
+.textlocation{
+  font-size: 1.1em;
+    text-align:center;
+    color: black;
+
+}
+.textminmax {
+width: 200px;
+align-content: flex-end;
+font-size: 3.2em;
+text-align: center;
+text-decoration: underline;
+padding-top: 70px;
+}
+
+.textminmax2 {
+width: 200px;
+align-content: flex-end;
+font-size: 1.2em;
+text-align: center;
+padding-top: 70px;
+}
+
+
+.text3{
+font-size: 0.8em;
+padding-top: 12px;
+}
+
+.weather-square {
+  width: 400px;
+  height: 200px;
+  background-color: black;
+  margin-left: 135px;
+
+}
+
+.weather-image {
+  width: 400px;
+  height:200px;
+  margin-left: 135px;
+
+}
+
+.rain .weather-image {
+  background-image: url(rain.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+    margin-top: 10px;
+}
+
+.snow .weather-image {
+  background-image: url(snow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+    margin-top: 10px;
+}
+
+.atmosphere .weather-image {
+  background-image: url(atmosphere.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+    margin-top: 10px;
+}
+
+.drizzle .weather-image {
+  background-image: url(drizzle.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+      margin-top: 10px;
+}
+
+.clear .weather-image {
+  background-image: url(clear.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+    margin-top: 10px;
+}
+
+.clouds .weather-image {
+  background-image: url(cloud.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: contain;
+    margin-top: 10px;
+}
+
+
+
+}
+
+body {
+}
